@@ -4,7 +4,7 @@ from PySide6.QtWidgets import QGraphicsPathItem, QGraphicsItemGroup, QGraphicsIt
 from PySide6.QtGui import QPen, QColor, QPainterPath
 from PySide6.QtCore import QPointF
 
-# 1. Решаем конфликт метаклассов (возвращаем твой pass-класс)
+# 1. Решаем конфликт метаклассов
 class CombinedMetaclass(type(QGraphicsItem), ABCMeta):
     pass
 
@@ -235,4 +235,5 @@ class Polygon(QGraphicsPathItem, Shape):
                 "width": self.stroke_width,
                 "is_closed": self.is_closed
             }
+
         }
